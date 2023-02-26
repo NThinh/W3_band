@@ -1,0 +1,437 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62,5%;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-main-color : #fff;
+    --bg-sub-main-color: #000;
+    --bg-main-btn : #000;
+    --bg-sub-main-btn : #ccc;
+    --text-main-color : #fff;
+    --text-sub-main-color : #000;
+    --heght-heading: 47px;
+
+    --modal-color-main : #009688;
+}
+
+.bg-sub-main-color {
+    background-color: var(--bg-sub-main-color);
+    color: var(--text-main-color);
+}
+
+.row {
+    margin: 0 -8px;
+}
+.col {
+    float: left;
+    padding: 4px 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-ful {
+    width: 100%;
+}
+
+
+/* #main {
+
+} */
+
+#header {  
+    height: var(--heght-heading);
+    background-color: var(--bg-sub-main-color);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+    
+}
+#nav , .subnav{
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+#nav > li{
+    position: relative;
+    display: inline-block;
+}
+#nav > li > a {
+    color: var(--text-main-color);
+    text-transform: uppercase;
+}
+#nav li a {
+    display: block;
+    text-decoration: none;  
+    line-height: var(--heght-heading);
+    padding: 0 24px;
+}
+#nav .subnav li:hover a ,
+#nav > li:hover > a {
+    color: var(--text-sub-main-color);
+    background-color: var(--bg-sub-main-btn);
+    
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    /* truc -+x, -+y, blur, lan tỏa, màu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+    color: var(--text-sub-main-color);  
+    padding: 0 12px;
+    line-height: 38px;
+    width: 160px;
+    
+}
+#nav .subnav > li {
+    width: 100%;
+   
+}
+.nav_arrow-down {
+    font-size: 1,4rem !important;
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.mobile-menu-btn {
+    display: none;
+}
+
+.mobile-menu-btn:hover,
+.search-btn:hover {
+    background-color: #f44336;
+}
+.mobile-menu-btn,
+.search-btn {
+    font-size: 1,4rem;
+    color: var(--bg-main-color);
+    float: right;
+    line-height: var(--heght-heading);
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+
+#slider {
+    position: relative;
+    margin-top: var(--heght-heading);
+    padding-top: 50%;
+    background: url('https://www.w3schools.com/w3images/chicago.jpg') no-repeat top center / cover 
+    , url(../img/300x300.png) no-repeat top center / contain;
+
+}
+.sld__container{
+    color: var(--text-main-color);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 32px 16px;
+
+}
+.sld__container-heading {
+    margin: 10px 0;
+    padding: 2px 0;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sld__container-desc {
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* #container {
+
+} */
+.container__sectiion {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container__section-heading {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.container__section-subheading {
+    text-align: center;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.container__about {
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 22px;
+}
+.container__members-list {
+    padding: 32px 0;
+    overflow: hidden;
+}
+.container__member-item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+.container__member-name {
+    margin: 15px 0;
+}
+.container__member-img {
+    width: 154px;
+    border-radius: 3%;
+    margin-bottom: 16px;
+}
+
+#container .book-lists {
+    background-color: var(--bg-main-color);
+    color: var(--bg-sub-main-color);
+    list-style: none;
+}
+#container .book-lists li {
+    padding: 10px 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+#container .wantity {
+    background: #f44336;
+    padding: 3px 7px;
+    margin-left: 15px;
+    color: #fff;
+}
+
+#container .ticket {
+    background: var(--bg-sub-main-color);
+    padding: 3px 8px;
+    color: var(--text-main-color);
+    border-radius: 50%;
+    float: right;
+    margin-right: 16px;
+    margin-top: -3px;
+}
+
+#container .place-lists {
+    padding: 30px 0px;
+    margin-left: -8px;
+    overflow: hidden;
+    margin-right: -8px;
+}
+#container .place-item {
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+    overflow: hidden;
+}
+#container .place-img {
+    width: 245px;
+    max-width: 100%;
+    display: block;
+}
+#container .place-img:hover {
+    opacity: 0.6;
+}
+
+#container .place-content {
+    background: var(--bg-main-color);
+    color: var(--text-sub-main-color);
+    padding: 0 16px;
+}
+#container .place-heading {
+    padding: 15px 0 0 0;
+}
+#container .place-time {
+    margin: 15px 0;
+    opacity: 0.6;
+}
+#container .place-desc {
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+#container .place-btn-buy {
+    margin-bottom: 16px;
+    padding: 10px 13px;   
+    background: var(--bg-main-btn);
+    color: var(--text-main-color);
+    border: none;
+    cursor: pointer;
+}
+#container .btn-commit:hover,
+#container .place-btn-buy:hover {
+    background: var(--bg-sub-main-btn);
+    color: var(--text-sub-main-color);
+}
+#container .contact {
+    padding: 32px 0;
+    overflow: hidden;
+}
+#container .contact-info i[class*="fas"] {
+    width: 30px;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+#container .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#container .btn-commit {
+    margin-bottom: 16px;
+    margin-top: 8px;
+    padding: 10px 13px;   
+    background: var(--bg-main-btn);
+    color: var(--text-main-color);
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+.section__map {
+    width: 100%;
+    filter: grayscale(50%); 
+}
+
+#footer {
+    padding: 64px 16px;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.6;
+}
+#footer .footer__icon i:hover {
+    opacity: 0.6;
+}
+#footer .footer__powered {
+    font-size: 16px;
+    margin: 15px 0;
+}
+.footer__powered > a {
+    color: #000;
+}
+
+.open {
+    display: flex !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+
+    
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal__container{
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+    animation: modalFadeIn ease .5s;
+
+}
+.modal__container-close {
+    float: right;
+    line-height: 52px;
+    padding: 0px 16px;
+    color: var(--text-main-color);
+    cursor: pointer;
+}
+.modal-btn:hover,
+.modal__container-close:hover {
+    background-color: var(--bg-sub-main-btn);
+    color: var(--text-sub-main-color);
+}
+.modal__container-heading {
+    background:var(--modal-color-main);
+    text-align: center;
+    line-height: 130px;
+    color: var(--text-main-color);
+}
+.modal__container-heading > i {
+    margin-right: 16px;
+}
+.modal__container-body {
+    padding: 0 16px;
+}
+.modal__container-label {
+    display: block;
+    margin: 15px 0;
+}
+.modal__container-input {
+    padding: 10px 8px;
+    font-size: 16px;
+    width: 100%;
+}
+.modal-btn {
+    margin: 16px 0;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    background: var(--modal-color-main);
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--text-main-color);
+    cursor: pointer;
+}
+.modal-footer {
+    float: right;
+    margin: 24px 0;
+}
+.modal__footer-help {
+    color: #2196F3;
+}
+
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    } 
+}
